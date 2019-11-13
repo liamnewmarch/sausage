@@ -1,0 +1,12 @@
+{
+  "name": "test",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "sausage build",
+    "start": "sausage watch"
+  },
+  "dependencies": {
+    "sausage": "file:.."
+  }
+}

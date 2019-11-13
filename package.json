@@ -1,0 +1,19 @@
+{
+  "name": "sausage",
+  "description": "Static site generator",
+  "version": "0.1.0",
+  "type": "module",
+  "bin": "bin/index.js",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/liamnewmarch/sausage.git"
+  },
+  "keywords": [],
+  "author": "Liam Newmarch",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/liamnewmarch/sausage/issues"
+  },
+  "homepage": "https://github.com/liamnewmarch/sausage#readme"
+}
