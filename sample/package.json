@@ -3,8 +3,7 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "build": "sausage build",
-    "start": "sausage watch"
+    "start": "sausage"
   },
   "dependencies": {
     "sausage": "file:.."
