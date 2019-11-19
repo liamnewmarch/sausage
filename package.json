@@ -1,5 +1,5 @@
 {
-  "name": "sausage",
+  "name": "@liamnewmarch/static",
   "description": "Static site generator",
   "version": "0.1.0",
   "type": "module",
@@ -7,17 +7,23 @@
   "main": "index.js",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/liamnewmarch/sausage.git"
+    "url": "git+https://github.com/liamnewmarch/static.git"
   },
   "keywords": [],
   "author": "Liam Newmarch",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/liamnewmarch/sausage/issues"
+    "url": "https://github.com/liamnewmarch/static/issues"
   },
-  "homepage": "https://github.com/liamnewmarch/sausage#readme",
+  "homepage": "https://github.com/liamnewmarch/static#readme",
   "scripts": {
     "test": "eslint **/*.js"
+  },
+  "dependencies": {
+    "express": "^4.17.1",
+    "fs-extra": "^8.1.0",
+    "minimist": "^1.2.0",
+    "request": "^2.88.0"
   },
   "devDependencies": {
     "eslint": "^6.6.0",

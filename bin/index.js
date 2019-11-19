@@ -1,30 +1,27 @@
 #!/usr/bin/env node --experimental-modules --no-warnings
 
-import { exit } from 'process';
-import meta from '../package.json';
+import { exit, stderr } from 'process';
+import args from '../lib/args.js';
 
-const helpText = `${meta.name} v${meta.version}
-Usage:
-  ${meta.name} [options]
-`;
+const commands = ['serve', 'help', 'build'];
+
+async function runCommand(command) {
+  const module = await import(`../lib/${command}.js`);
+  await module.default();
+  exit(0);
+}
 
 async function main() {
   try {
-    const { flags } = await import('../lib/args.js');
-
-    if (flags.help) {
-      console.log(helpText);
-      exit(0);
+    for (const command of commands) {
+      if (args[command]) {
+        await runCommand(command);
+      }
     }
-
-    const { getConfig } = await import('../lib/config.js');
-    const { build } = await import('../lib/build.js');
-
-    const config = await getConfig(flags);
-    await build(config);
-    exit(0);
-  } catch (error) {
-    console.log(error);
+    await runCommand('build');
+  } catch ({ message }) {
+    stderr.write(`Error: ${message}.\n`);
+    exit(1);
   }
 }
 

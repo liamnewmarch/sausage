@@ -1,14 +1,6 @@
-# Sausage
+# Static
 
-> Static site generator
-
-## What?
-
-It’s a static site generator. An SSG. Sausage. Get it? Ha ha. Moving on.
-
-## No really, what?
-
-Sausage is a really simple tool with zero dependencies for building static sites with vanilla JavaScript.
+Static is a really simple tool with minimal dependencies for building static sites with vanilla JavaScript.
 
 The build process revolves around pages and templates.
 
@@ -35,10 +27,10 @@ And this is your template.
 export default ({ title }) => `<p>${title}</p>`;
 ```
 
-Run Sausage to build this to a `build` directory.
+Run static to build this to a `build` directory.
 
 ```shell
-$ npx sausage
+$ npx @liamnewmarch/static
 Building... done!
 $ cat build/index.html
 <p>Hello, world!</p>

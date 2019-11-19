@@ -1,3 +1,5 @@
+import { map } from '@liamnewmarch/static';
+
 export default ({ title }) => `
 <!DOCTYPE html>
 <html dir="ltr" lang="en">
@@ -8,6 +10,11 @@ export default ({ title }) => `
   </head>
   <body>
     <p>${title}</p>
+    <ul>
+      ${map(['One', 'Two', 'Three'], item => `
+        <li>${item}</li>
+      `)}
+    </ul>
   </body>
 </html>
 `;
