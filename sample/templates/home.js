@@ -6,7 +6,7 @@ export default ({ title }) => `
   <head>
     <meta charset="utf-8">
     <title>${title}</title>
-    <link href="static/style.css" rel="stylesheet">
+    <link href="/style.css" rel="stylesheet">
   </head>
   <body>
     <p>${title}</p>

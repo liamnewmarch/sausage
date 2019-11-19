@@ -1,10 +1,9 @@
 html {
   background-color: #eee;
   color: #222;
-  font: bold 200% sans-serif;
+  font: 100% sans-serif;
 }
 
 body {
   margin: 2em;
-  text-align: center;
 }

@@ -3,25 +3,29 @@
 import { exit, stderr } from 'process';
 import args from '../lib/args.js';
 
-const commands = ['serve', 'help', 'build'];
+const commands = ['version', 'help', 'serve', 'build'];
 
 async function runCommand(command) {
   const module = await import(`../lib/${command}.js`);
-  await module.default();
-  exit(0);
+  return module.default();
 }
 
 async function main() {
   try {
     for (const command of commands) {
       if (args[command]) {
-        await runCommand(command);
+        return await runCommand(command);
       }
     }
-    await runCommand('build');
-  } catch ({ message }) {
-    stderr.write(`Error: ${message}.\n`);
-    exit(1);
+    return await runCommand('build');
+  } catch (error) {
+    if (args.verbose) {
+      console.error(error);
+      exit(1);
+    } else {
+      stderr.write(`Error: ${error.message}.\n`);
+      exit(1);
+    }
   }
 }
 
