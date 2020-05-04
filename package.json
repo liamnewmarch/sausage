@@ -35,7 +35,5 @@
     "js-yaml": "^3.13.1",
     "yaml-front-matter": "^4.1.0"
   },
-  "devDependencies": {
-    "eslint-config-google": "^0.14.0"
-  }
+  "devDependencies": {}
 }
