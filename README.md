@@ -28,10 +28,10 @@ Commands:
 
 Dependencies are carefully considered to keep the installed size of the project low.
 
+* [`@liamnewmarch/static-server`](https://www.npmjs.com/package/@liamnewmarch/static-server) for the local development server.
 * [`chalk`](https://www.npmjs.com/package/chalk) for making the output readable.
 * [`chokidar`](https://www.npmjs.com/package/chokidar) for watching files.
 * [`commander`](https://www.npmjs.com/package/commander) for parsing CLI input.
-* [`express`](https://www.npmjs.com/package/express) for the local development server.
 * [`fs-extra`](https://www.npmjs.com/package/fs-extra) for reading and writing files.
 * [`js-yaml`](https://www.npmjs.com/package/js-yaml) for parsing YAML.
 * [`yaml-front-matter`](https://www.npmjs.com/package/yaml-front-matter) for reading file metadata.
